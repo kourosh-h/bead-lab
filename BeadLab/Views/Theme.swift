@@ -1,6 +1,6 @@
 import SwiftUI
 
-// Colours from the website: near-black ground, cobalt and ochre beads.
+// Colors from the website: near-black ground, cobalt and ochre beads.
 extension Color {
     static let ground = Color(red: 0.047, green: 0.055, blue: 0.063)   // #0c0e10
     static let paper  = Color(red: 0.078, green: 0.090, blue: 0.106)   // #14171b

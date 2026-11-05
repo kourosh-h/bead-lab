@@ -37,7 +37,7 @@ func draw(_ pic: Picture, in ctx: inout GraphicsContext, size: CGSize) {
         ctx.stroke(path, with: .color(Color.ochre.opacity(0.6)), lineWidth: 1)
     }
 
-    // one path per bead colour, so thousands of beads are only three fills
+    // one path per bead color, so thousands of beads are only three fills
     if !pic.beads.isEmpty {
         let r = max(1, CGFloat(pic.radius) * s)
         var paths = [Path(), Path(), Path()]

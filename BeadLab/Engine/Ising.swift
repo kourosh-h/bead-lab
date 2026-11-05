@@ -69,7 +69,7 @@ final class Ising: Simulation {
         pic.field = spin.map { Float($0) }
         pic.nx = size; pic.ny = size
         let v = history.values
-        pic.curve = Curve(x: v.indices.map { Float($0) }, y: v, xLabel: "frames (last 300)", yLabel: "|magnetisation|")
+        pic.curve = Curve(x: v.indices.map { Float($0) }, y: v, xLabel: "frames (last 300)", yLabel: "|magnetization|")
         return pic
     }
 }
