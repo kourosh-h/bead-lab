@@ -2,8 +2,6 @@
 
 An iPhone app that runs simulations from molecular dynamics, soft matter and pattern formation live on the phone, each with a short explanation of the model behind it. Written in Swift with SwiftUI, with Metal for the GPU simulation.
 
-![license](https://img.shields.io/badge/license-MIT-green)
-
 ## Question
 How much real simulation fits in a phone? Can a phone run the same kind of models that run on clusters (MD, DPD, Monte Carlo, phase-field) fast enough to play with, and can that be used to teach them?
 
