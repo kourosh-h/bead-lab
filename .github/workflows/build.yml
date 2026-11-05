@@ -1,0 +1,23 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  engine-tests:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift test
+
+  app:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install xcodegen
+      - run: xcodegen generate
+      - name: Build for the iOS simulator (no signing needed)
+        run: |
+          set -o pipefail
+          xcodebuild -project BeadLab.xcodeproj -scheme BeadLab \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO build | tail -n 40
